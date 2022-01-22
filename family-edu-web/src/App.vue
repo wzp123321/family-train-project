@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <a-button>1212</a-button>
+  <a-locale-provider :locale="zhCN">
+    <router-view></router-view>
+  </a-locale-provider>
 </template>

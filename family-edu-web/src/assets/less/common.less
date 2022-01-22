@@ -1,1 +1,43 @@
 @import './reset.less';
+@import './flex.less';
+
+each(range(1000), {
+    .mt@{key} {
+        margin-top: @value * 1px;
+    }
+    .mr@{key} {
+        margin-right:  @value * 1px;
+    }
+    .mb@{key} {
+        margin-bottom:  @value * 1px;
+    }
+    .ml@{key} {
+        margin-left: @value * 1px;
+    }
+    .pt@{key} {
+        padding-top: @value * 1px;
+    }
+    .pr@{key} {
+        padding-right:  @value * 1px;
+    }
+    .pb@{key} {
+        padding-bottom:  @value * 1px;
+    }
+    .pl@{key} {
+        padding-left: @value * 1px;
+    }
+    .lineH@{key} {
+        line-height:  @value * 1px;
+    }
+    .font@{key} {
+        font-size:  @value * 1px;
+    }
+});
+
+.height100 {
+  height: 100%;
+}
+
+.text-overflow {
+  overflow: hidden;
+}

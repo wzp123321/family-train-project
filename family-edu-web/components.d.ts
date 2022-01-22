@@ -4,7 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AButton: typeof import('ant-design-vue/es')['Button']
+    ALocaleProvider: typeof import('ant-design-vue/es')['LocaleProvider']
   }
 }
 
