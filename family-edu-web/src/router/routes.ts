@@ -1,17 +1,26 @@
-import { RouteRecordRaw } from 'vue-router';
+import { RouteRecordRaw } from 'vue-router'
 
-const routes:RouteRecordRaw[] = [
-    {
-        path: '/',
-        component: ()=>import('@/views/home/home.vue'),
-    },
-    {
-        path: '/login',
+const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: () => import('@/views/home/home.vue'),
+    children: [
+      {
+        path: '/courseManage',
         meta: {
-            name: '登录',
+          name: '课程管理',
         },
-        component: ()=>import('@/views/login/login.vue'),
-    }
-];
+        component: () => import('@/pages/course-manage/course-manage.vue'),
+      },
+    ],
+  },
+  {
+    path: '/login',
+    meta: {
+      name: '登录',
+    },
+    component: () => import('@/views/login/login.vue'),
+  },
+]
 
-export default routes;
+export default routes

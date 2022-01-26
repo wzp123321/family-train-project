@@ -1,0 +1,16 @@
+<div class="page-common height100 flex-column">
+    <!-- 标题 -->
+    <h2>{{ title }}</h2>
+    <!-- 搜索框 -->
+    <div class="page-common--search">
+        <slot name="pageSearch"></slot>
+    </div>
+    <!-- 副标题 -->
+    <div class="page-common--subtitle flex-row-justify-center">
+        <slot name="pageSubTitle"></slot>
+    </div>
+    <!-- 内容 -->
+    <div class="page-common--content flex1">
+        <slot name="pageContent"></slot>
+    </div>
+</div>

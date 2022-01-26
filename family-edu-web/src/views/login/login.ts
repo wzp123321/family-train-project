@@ -1,6 +1,6 @@
 import { defineComponent, reactive, toRefs } from 'vue'
 // component
-import { Form, FormItem, Input, Button } from 'ant-design-vue'
+import { Form, FormItem, Input, Button, message } from 'ant-design-vue'
 
 interface LoginState {
   pageForm: ILogin.LoginForm
@@ -13,6 +13,7 @@ export default defineComponent({
     'a-form-item': FormItem,
     'a-input': Input,
     'a-button': Button,
+    message,
   },
   setup() {
     const loginState = reactive<LoginState>({
@@ -22,7 +23,16 @@ export default defineComponent({
       },
     })
     // 提交
-    const onSubmit = () => {}
+    const onSubmit = () => {
+      if (!loginState.pageForm.username) {
+        message.error('请填写用户名！')
+        return
+      }
+      if (!loginState.pageForm.password) {
+        message.error('请填写密码！')
+        return
+      }
+    }
 
     return {
       ...toRefs(loginState),

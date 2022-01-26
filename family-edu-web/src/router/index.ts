@@ -9,7 +9,7 @@ const router = createRouter({
 
 // 路由钩子函数
 router.beforeEach((to, from, next)=>{
-    document.title = to.meta && to.meta.name ? to.meta.name as string : '媛媛家教系统';
+    document.title = to.meta && to.meta.name ? to.meta.name as string : '媛梦家教系统';
     next();
 })
 

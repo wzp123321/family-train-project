@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ALocaleProvider: typeof import('ant-design-vue/es')['LocaleProvider']
+    PageCommon: typeof import('./src/components/page-common/page-common.vue')['default']
   }
 }
 
