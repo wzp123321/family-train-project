@@ -1,5 +1,12 @@
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
+// components
+import { Menu } from 'ant-design-vue'
 
 export default defineComponent({
-    name: 'AsideBox',
+  name: 'AsideBox',
+  components: {
+    'a-menu': Menu,
+    'a-menu-item': Menu.Item,
+    'a-sub-menu': Menu.SubMenu,
+  },
 })
