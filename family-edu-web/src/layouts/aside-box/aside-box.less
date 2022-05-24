@@ -1,0 +1,59 @@
+.edu-menu.ant-menu {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--menu-bg-color);
+  color: var(--color-default);
+  font-size: 16px;
+
+  // 单个菜单
+  &.ant-menu-root {
+    li.ant-menu-item[role='menuitem'] {
+      margin: 8px 0;
+      padding-left: 0;
+      height: 48px !important;
+      line-height: 48px !important;
+    }
+
+    li.ant-menu-item[role='menuitem'] span.ant-menu-title-content {
+      margin-left: 0;
+    }
+
+    li.ant-menu-item[role='menuitem'] i.iconfont {
+      font-size: 16px;
+      padding: 16px 17px;
+    }
+
+    li.ant-menu-item[role='menuitem']:hover {
+      color: var(--color-default);
+      background-color: var(--menu-hover-color);
+    }
+
+    li.ant-menu-item[role='menuitem'].ant-menu-item-selected {
+      color: var(--color-primary);
+      background-color: var(--menu-hover-color);
+
+      i.iconfont {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  li.ant-menu-submenu[role='none'] {
+    & > .ant-menu-submenu-title {
+      margin: 8px 0;
+      padding-left: 0;
+      height: 48px !important;
+      line-height: 48px !important;
+
+      & > i.iconfont.ant-menu-item-icon {
+        font-size: 16px;
+        padding: 16px 17px;
+      }
+
+      & > .ant-menu-title-content {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,16 +1,16 @@
-<div class="page-common height100 flex-column">
-    <!-- 标题 -->
-    <h2>{{ title }}</h2>
-    <!-- 搜索框 -->
-    <div class="page-common--search">
-        <slot name="pageSearch"></slot>
+<div class="page-common flex flex-column">
+  <h2 class="page-common--title">
+    {{ title }}
+    <slot name="pageSubTitle"></slot>
+  </h2>
+  <div class="page-common--container flex flex-column">
+    <!-- 搜索模块 start -->
+    <div class="page-common--container-search" v-if="showSearch">
+      <slot name="pageSearch"></slot>
     </div>
-    <!-- 副标题 -->
-    <div class="page-common--subtitle flex-row-justify-center">
-        <slot name="pageSubTitle"></slot>
+    <!-- 副标题模块 end -->
+    <div class="page-common--container-detail">
+      <slot name="pageContent"></slot>
     </div>
-    <!-- 内容 -->
-    <div class="page-common--content flex1">
-        <slot name="pageContent"></slot>
-    </div>
+  </div>
 </div>

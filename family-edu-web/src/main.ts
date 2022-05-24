@@ -6,5 +6,9 @@ import router from '@/router/index';
 import 'ant-design-vue/dist/antd.css';
 import '@/assets/less/common.less';
 
+import registerComponent from '@/components/register';
+
 const app = createApp(App);
+
+registerComponent(app);
 app.use(router).mount('#app');

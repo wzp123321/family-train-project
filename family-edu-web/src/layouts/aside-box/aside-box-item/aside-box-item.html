@@ -1,0 +1,11 @@
+<a-menu-item :key="menuItem.url" v-if="menuItem?.children?.length === 0">
+  <template #icon v-if="menuItem?.hasIcon">
+    <i :class="menuItem.icon"></i> </template
+  >{{ menuItem.name }}
+</a-menu-item>
+<a-sub-menu v-else :key="menuItem.url" :title="menuItem.name">
+  <template #icon v-if="menuItem?.hasIcon">
+    <i :class="menuItem.icon"></i>
+  </template>
+  <AsideBoxItem v-for="(item, index) in menuItem.children" :key="'child'+index" :menuItem="item"></AsideBoxItem>
+</a-sub-menu>

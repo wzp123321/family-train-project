@@ -1,12 +1,20 @@
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 // components
-import { Menu } from 'ant-design-vue'
+import { Menu } from 'ant-design-vue';
+
+import menuService from './services/aside-service';
+
+import AsideBoxItem from './aside-box-item/aside-box-item.vue';
 
 export default defineComponent({
   name: 'AsideBox',
   components: {
     'a-menu': Menu,
-    'a-menu-item': Menu.Item,
-    'a-sub-menu': Menu.SubMenu,
+    'aside-box-item': AsideBoxItem,
   },
-})
+  setup() {
+    return {
+      menuService,
+    };
+  },
+});
