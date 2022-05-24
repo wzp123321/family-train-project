@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -17,10 +17,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/login',
     meta: {
-      name: '登录',
+      name: '登录系统',
     },
     component: () => import('@/views/login/login.vue'),
   },
-]
+];
 
-export default routes
+export default routes;

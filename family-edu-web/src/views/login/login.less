@@ -5,6 +5,7 @@
   background-image: url(../../assets/images/login/login-bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
   &-container {
     position: relative;
     width: 40%;
@@ -15,32 +16,39 @@
     background-size: 100% 100%;
     overflow: hidden;
     background-repeat: no-repeat;
+
     :deep(.ant-form) {
       width: 40%;
       height: 240px;
       position: absolute;
       top: 32%;
       right: 24px;
+
       &-item.ant-row {
         display: flex;
         flex-direction: column;
         margin-bottom: 54px;
+
         .ant-col.ant-form-item-label {
           text-align: left;
           margin-bottom: 4px;
           font-weight: 600;
+
           & > label::after {
             content: '';
           }
         }
+
         .ant-input {
           border: none;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
       }
+
       &-item.form-btn {
         text-align: center;
         padding-top: 12px;
+
         .ant-btn {
           width: 100%;
           height: 36px;
