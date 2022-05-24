@@ -9,7 +9,7 @@
   // 单个菜单
   &.ant-menu-root {
     li.ant-menu-item[role='menuitem'] {
-      margin: 8px 0;
+      margin: 8px 0 16px 0;
       padding-left: 0;
       height: 48px !important;
       line-height: 48px !important;
@@ -39,7 +39,28 @@
     }
   }
 
+  // 多级菜单
   li.ant-menu-submenu[role='none'] {
+    &:hover > .ant-menu-submenu-title {
+      background-color: var(--menu-hover-color);
+      color: var(--color-default);
+
+      & > i.ant-menu-submenu-arrow {
+        color: var(--menu-icon-color);
+      }
+    }
+
+    &.ant-menu-submenu-selected {
+      > .ant-menu-submenu-title {
+        background-color: var(--menu-hover-color);
+        color: var(--color-primary);
+
+        & > i.ant-menu-submenu-arrow {
+          color: var(--color-primary);
+        }
+      }
+    }
+
     & > .ant-menu-submenu-title {
       margin: 8px 0;
       padding-left: 0;
@@ -53,6 +74,80 @@
 
       & > .ant-menu-title-content {
         margin-left: 0;
+      }
+
+      & > i.ant-menu-submenu-arrow {
+        color: var(--menu-icon-color);
+      }
+    }
+  }
+}
+
+// 弹出层
+.ant-menu-submenu.ant-menu-submenu-popup {
+  & > ul.ant-menu,
+  & > ul.ant-menu > li {
+    background-color: var(--menu-bg-color);
+    color: var(--color-default);
+    font-size: 16px;
+  }
+
+  & > ul.ant-menu > li.ant-menu-item[role='menuitem'] {
+    margin: 0;
+    line-height: 48px;
+    height: 48px;
+    color: var(--color-default);
+    padding: 0 16px 0 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.ant-menu-item-selected {
+      color: var(--color-primary);
+      background-color: var(--menu-hover-color);
+    }
+
+    &:hover {
+      background-color: var(--menu-hover-color);
+    }
+  }
+
+  & > ul.ant-menu > li.ant-menu-submenu[role='none'] {
+    &.ant-menu-submenu-selected {
+      & > .ant-menu-submenu-title {
+        background-color: var(--menu-hover-color);
+        .ant-menu-title-content {
+          color: var(--color-primary);
+        }
+
+        & > i.ant-menu-submenu-arrow {
+          color: var(--color-primary);
+        }
+      }
+    }
+
+    &:not(.ant-menu-submenu-selected):hover {
+      background-color: var(--menu-hover-color);
+
+      .ant-menu-title-content {
+        color: var(--color-default);
+      }
+
+      & > .ant-menu-submenu-arrow {
+        color: var(--menu-icon-color);
+      }
+    }
+
+    .ant-menu-submenu-title {
+      margin: 0;
+      line-height: 48px;
+      height: 48px;
+      color: var(--color-default);
+      padding: 0 16px 0 24px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      & > .ant-menu-submenu-arrow {
+        color: var(--menu-icon-color);
       }
     }
   }

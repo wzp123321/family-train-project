@@ -3,7 +3,7 @@
  * @Author: zpwan
  * @Date: 2022-05-24 14:37:01
  * @Last Modified by: zpwan
- * @Last Modified time: 2022-05-24 15:38:56
+ * @Last Modified time: 2022-05-24 16:12:24
  */
 import { ref } from 'vue';
 import { MenuVO } from './aside-api';
@@ -24,6 +24,21 @@ class MenuService {
           url: '/courseManage2',
           icon: 'iconfont icon-jiaoshi',
           children: [],
+        },
+        {
+          id: 3,
+          name: '教师管理2',
+          url: '/courseManage332',
+          icon: 'iconfont icon-jiaoshi',
+          children: [
+            {
+              id: 3,
+              name: '教师管3理2',
+              url: '/courseMan32age332',
+              icon: 'iconfont icon-jiaoshi',
+              children: [],
+            },
+          ],
         },
       ],
     },

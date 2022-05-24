@@ -1,9 +1,7 @@
 <a-menu-item :key="menuItem.url" v-if="menuItem?.children?.length === 0">
-  <template #icon v-if="menuItem?.hasIcon">
-    <i :class="menuItem.icon"></i> </template
-  >{{ menuItem.name }}
+  <template #icon v-if="menuItem?.hasIcon"> <i :class="menuItem.icon"></i> </template>{{ menuItem.name }}
 </a-menu-item>
-<a-sub-menu v-else :key="menuItem.url" :title="menuItem.name">
+<a-sub-menu v-else :key="menuItem.url" :title="menuItem.name" :popupOffset="[8, 0]">
   <template #icon v-if="menuItem?.hasIcon">
     <i :class="menuItem.icon"></i>
   </template>
