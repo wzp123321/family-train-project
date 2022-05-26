@@ -76,7 +76,7 @@ const xAxis = [
 
 class AlarmChartService<T> {
   //#region
-  private _is_init = ref<boolean>(false)
+  private _is_init = ref<boolean>(false);
   private _dataSource = ref<T>();
   private _customChartId = ref<string>('');
   private echartsInstance?: EChartsType;
@@ -87,20 +87,20 @@ class AlarmChartService<T> {
   }
   constructor(params: T) {
     this._customChartId.value = `charts_${(Math.random() * 10000).toFixed(0)}`;
-    this._is_init.value = true
+    this._is_init.value = true;
     this._dataSource.value = params;
   }
 
   //#region 初始化
   initChart() {
-    if(!this._is_init.value){
+    if (!this._is_init.value) {
       console.warn('请先初始化服务！');
       return;
     }
     const containerEle = document.getElementById(this._customChartId.value);
     if (!containerEle) {
       console.warn('加载图表容器错误！');
-return
+      return;
     }
     this.echartsInstance = init(containerEle);
     const options = this.getEchartsOptions();
@@ -146,10 +146,10 @@ return
       yAxis: {
         type: 'value',
         axisLabel: {
-          formatter:(params: number)=>{
-            return params === THRESHOLD_VALUE ? '' : params + ''
+          formatter: (params: number) => {
+            return params === THRESHOLD_VALUE ? '' : params + '';
           },
-          color: 'rgba(0, 0, 0, 0.65)'
+          color: 'rgba(0, 0, 0, 0.65)',
         },
         axisTick: {
           show: true,
@@ -308,7 +308,7 @@ return
               label: {
                 show: true,
                 position: 'start',
-                color:DANGER_COLOR
+                color: DANGER_COLOR,
               },
               lineStyle: {
                 width: 1,
@@ -445,7 +445,7 @@ return
             },
           };
           arrData.push(arrItem);
-        } else if(item === OUT_OF_LIMIT_VALUE || item === PEAK_VALUE){
+        } else if (item === OUT_OF_LIMIT_VALUE || item === PEAK_VALUE) {
           arrItem = {
             value: item,
             emphasis: {
@@ -458,7 +458,7 @@ return
             itemStyle: this.getsymbolStyle(color, shadowColor),
           };
           arrData.push(arrItem);
-        }else {
+        } else {
           arrItem = {
             value: item,
 
