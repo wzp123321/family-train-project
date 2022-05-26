@@ -6,7 +6,8 @@ import { ResTemplate } from '@/services/common-api';
 // 节流防抖 时间戳
 let timeStamp: any;
 // components
-import message from '@/utils/message';
+import {message } from 'ant-design-vue';
+import dayjs from 'dayjs';
 
 /**
  * 获取地址栏参数
@@ -195,4 +196,14 @@ export function FResHandler<T = void>(res: ResTemplate<T>): T {
   }
 
   throw res?.message ?? '未知原因';
+}
+
+/**
+ * 日期格式化
+ * @param timeStamp 
+ * @param formatStr 
+ * @returns 
+ */
+export const formatDate = (timeStamp: number | Date , formatStr:string)=>{
+  return dayjs(timeStamp).format(formatStr)
 }
