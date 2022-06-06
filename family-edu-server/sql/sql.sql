@@ -93,3 +93,32 @@ CREATE TABLE family_patriarch
     PRIMARY KEY (id)
 ) COMMENT = '家长表';
 CREATE UNIQUE INDEX patriarch_id ON family_patriarch (id);
+
+# 课程表
+CREATE TABLE family_course
+(
+    id           BIGINT       NOT NULL COMMENT '逻辑主键',
+    name         VARCHAR(10) NOT NULL COMMENT '课程姓名',
+    teacher_id   BIGINT NOT NULL COMMENT '教师id',
+    teacher_name VARCHAR(10) NOT NULL COMMENT '教师姓名',
+    subject_id   BIGINT NOT NULL COMMENT '学科id',
+    subject_name VARCHAR(10) NOT NULL COMMENT '学科名',
+    grade_id     BIGINT NOT NULL COMMENT '年纪id',
+    grade_name   VARCHAR(10) NOT NULL COMMENT '年纪名',
+    start_time   BIGINT NOT NULL COMMENT '开始时间',
+    duration    BIGINT  NOT NULL COMMENT '时长',
+    address VARCHAR(255) NOT NULL COMMENT '上课地点',
+    qq VARCHAR(50)  COMMENT 'qq',
+    weixin VARCHAR(50) COMMENT '微信',
+    email VARCHAR(50) NOT NULL COMMENT '邮箱',
+    phone VARCHAR(20) NOT NULL COMMENT '手机号码',
+    address VARCHAR(255) NOT NULL COMMENT '家庭地址',
+    education_id INTEGER(10) NOT NULL COMMENT '学历id',
+    education_name VARCHAR(10) NOT NULL COMMENT '学历',
+    status INTEGER(10) DEFAULT '0' COMMENT '0-未删除 1-已删除',
+    description VARCHAR(255)  COMMENT '个人描述',
+    create_time  DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    update_time  DATETIME DEFAULT CURRENT_TIMESTAMP On update CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (id)
+) COMMENT = '课程表';
+CREATE UNIQUE INDEX course_id ON family_course (id);
