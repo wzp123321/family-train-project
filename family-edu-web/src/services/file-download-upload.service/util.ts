@@ -6,7 +6,7 @@
  * @Last Modified time: 2022-05-11 10:37:37
  */
 import { IRes } from './file-download-api';
-import message from '@/utils/message';
+import { message } from 'ant-design-vue';
 
 /**
  * 二进制响应处理

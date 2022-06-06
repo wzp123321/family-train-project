@@ -9,7 +9,7 @@
 import { ref } from 'vue';
 
 import { postRequest } from '@/services/request';
-import message from '@/utils/message';
+import { message } from 'ant-design-vue';
 
 import { FBlobHandler } from './util';
 
@@ -45,8 +45,6 @@ export class FileDownloadService<T> {
       console.warn('导出数据', '-->', error);
       message.error(`导出失败，${error}`);
       errorCb();
-    } finally {
-      messageInstance.close();
     }
   };
 }
