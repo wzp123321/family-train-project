@@ -3,7 +3,7 @@
  * @Author: zpwan
  * @Date: 2022-06-06 16:28:15
  * @Last Modified by: zpwan
- * @Last Modified time: 2022-06-06 17:01:56
+ * @Last Modified time: 2022-06-06 17:04:13
  */
 import { ref } from 'vue';
 import * as echarts from 'echarts/core';
@@ -53,30 +53,30 @@ class ChartMapService {
     {
       id: '312312',
       code: '312312',
-      tag: '312312', // 能源事件跳转标记
-      name: '312312', // 项目名称
-      coordinate: [117.348611, 40.581141], // 坐标
-      alarm: false, // 新能源事件告警
-      state: 1, // 盈利情况 1-亏损 2-低盈利 3-中盈利 4-高盈利
-      profitState: 1, // 项目状态 1-已签约未进场 2-建设期 3-运营期
-      start: '312312', // 托管开始时间
-      end: '312312', // 托管结束时间
-      manager: '12321312', // 能源经理
-      surplus: { value: 123131, unit: 'string' }, // 盈余
+      tag: '312312',
+      name: '312312',
+      coordinate: [117.348611, 40.581141],
+      alarm: false,
+      state: 1,
+      profitState: 1,
+      start: '312312',
+      end: '312312',
+      manager: '12321312',
+      surplus: { value: 123131, unit: 'string' },
     },
     {
       id: '312312',
       code: '312312',
-      tag: '312312', // 能源事件跳转标记
-      name: '312312', // 项目名称
-      coordinate: [116.599629, 34.014324], // 坐标
-      alarm: false, // 新能源事件告警
-      state: 1, // 盈利情况 1-亏损 2-低盈利 3-中盈利 4-高盈利
-      profitState: 1, // 项目状态 1-已签约未进场 2-建设期 3-运营期
-      start: '312312', // 托管开始时间
-      end: '312312', // 托管结束时间
-      manager: '12321312', // 能源经理
-      surplus: { value: 123131, unit: 'string' }, // 盈余
+      tag: '312312',
+      name: '312312',
+      coordinate: [116.599629, 34.014324],
+      alarm: false,
+      state: 1,
+      profitState: 1,
+      start: '312312',
+      end: '312312',
+      manager: '12321312',
+      surplus: { value: 123131, unit: 'string' },
     },
   ];
   //#endregion
