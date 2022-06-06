@@ -21,6 +21,13 @@ const routes: RouteRecordRaw[] = [
     },
     component: () => import('@/views/login/login.vue'),
   },
+  {
+    path: '/demo',
+    meta: {
+      name: 'demo',
+    },
+    component: () => import('@/views/demo/demo.vue'),
+  },
 ];
 
 export default routes;
